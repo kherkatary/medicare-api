@@ -11,7 +11,8 @@ const app= express();
 connect_database(); // connection database
 config() //config for env files
 app.use(morgan('tiny')) //to be removed in production, only used in development phase
-app.use(express.json());  //used to parse json data into string data
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))  //used to parse json data into string data
 app.use(cors()) // very very important
 
 // Routes
