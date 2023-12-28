@@ -24,6 +24,6 @@ app.get('/',(req,res)=>{
     res.send("Hello Server, send me some data");
 })
 
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT || 8080, ()=>{
     console.log(`Server Listeing on Port ${process.env.PORT}`);
 })
